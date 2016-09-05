@@ -26,7 +26,26 @@
 - Do not use a "spacer.gif", if you need a blank `<td>` use the following:
 
 ```
-    <tr>
-        <td height="desiredHeight" style="line-height: 1px; font-size: 1px;" width="desiredWidth"></td>
-    </tr>
+<tr>
+    <td height="desiredHeight" style="line-height: 1px; font-size: 1px;" width="desiredWidth"></td>
+</tr>
+```
+
+- To remove the blue links on iOS devices like (Today) use the following:
+```
+a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+}
+```
+
+- To add hidden pre-text copy use the following:
+```
+<div style="color: #000000; display: none; font-family: Arial; font-size: 1 px; line-height: 1 px; max-height: 0 px; max-width: 0 px; mso-hide: all; opacity: 0; overflow: hidden;">
+    Put your text here
+</div>
 ```
